@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html><head>
+    <meta name="deepview-service" content="deepview-service" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="./96favicon.ico" />
+ <style type="text/css">
+      body {
+        background-color: #fff;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .main1 {
+        padding-left: 35px;
+        padding-right: 30px;
+      }
+
+      #main-image img {
+        margin-bottom: -4.5px;
+      }
+
+      .row {
+        display: flex;
+		}
+
+      section {
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        position: fixed;
+      }
+
+      .row {
+        border: 1px solid #E8E8E8;
+        border-left: 0px;
+      }
+
+      /* Elements */
+      .card {
+        background-color: #fff;
+        width: 830px;
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        -moz-flex-direction: row;
+        border: 1px solid #E8E8E8;
+      }
+
+      .main {
+        margin: 0px !important;
+        padding: 0px !important;
+      }
+
+      .app-title img {
+        margin-left: 10px;
+      }
+
+      .app-title {
+        font-size: 16px;
+        line-height: 19px;
+        /* padding-bottom: 20px; */
+        /* border-bottom: 3px solid #cecece; */
+        text-transform: uppercase;
+        background-color: #414141;
+        color: #fff;
+        padding: 10px;
+        display: inline-flex;
+        font-weight: 400;
+        font-size:14px;
+      }
+
+      .card-title {
+        margin: 16px 0;
+        font-size: 25px;
+        line-height: 32px;
+        color: #000;
+        font-weight: 600;
+        margin-top: 50px;
+        margin-bottom: 0;
+      }
+
+      .app-content {
+        margin: 10px 0;
+        font-size: 16px;
+        max-height: 90px;
+        font-weight: 300;
+        line-height: 1.6;
+        padding-right: 20px;
+        margin-bottom: 0;
+      }
+
+      .input-container {
+        margin-top: 20px;
+      }
+
+      form>input {
+        margin-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        -moz-flex: 1;
+        background-color: #fff;
+        border: 1px solid #979797;
+        border-radius: 2px;
+        font-size: 18px;
+        color: #444;
+        line-height: 24px;
+        padding-left: 20px;
+      }
+
+      button {
+        background-color: #444;
+        border: 1px solid #444;
+        border-radius: 2px;
+        font-size: 20px;
+        color: #fff;
+        line-height: 27px;
+        cursor: pointer;
+      }
+
+      .input-container>form {
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+      }
+
+      .input-label {
+        padding-bottom: 10px;
+      }
+
+      .input-footnote {
+        font-size: 25%;
+      }
+
+      .cta-button {
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 8px;
+        background-color: #1a8cec;
+        border-radius: 25px;
+        font-size: 20px;
+        padding: 0px 34px;
+        margin-top: 20px;
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        vertical-align: center;
+        position: relative;
+      }
+
+      .cta-button img {
+        position: relative;
+        top: 8px;
+        right: -20px;
+      }
+
+      /* No-Data */
+      .card--no-data {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+      }
+
+      .card--no-data #inner-div {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      .card--no-data .input-container {
+        position: static;
+      }
+
+      .card--no-data .app-content {
+        height: 170px;
+        overflow-y: auto;
+      }
+
+    
+      .bold {
+        
+        font-weight: 700
+      }
+
+      .light {
+        
+        font-weight: 300;
+      }
+
+      .error {
+        color: #FF7878;
+      }
+       @media only screen and (max-width: 1400px) {
+        .card-title{
+          margin-top: 20px !important;
+        }
+        .main1{
+          padding-left: 10px;
+        }
+/*        .input-container{
+          margin-top: 70px;
+        }*/
+       }
+      @media only screen and (max-width: 600px) {
+        .center {
+          position: static;
+          top: 0px;
+          left: 0px;
+        }
+
+        .row {
+          display: block !important;
+        }
+
+        #main-image {
+          margin: 10px 0;
+         
+        }
+
+        .content-container {
+          padding: 0px 20px;
+        }
+
+        section {
+          transform: none;
+          top: 0;
+          left: 0;
+          position: static;
+          margin: auto;
+          text-align: center;
+          overflow: scroll;
+        }
+
+        .row {
+          border: none;
+        }
+
+        .card-title {
+          margin-top: 20px;
+        }
+        .main1{
+        	padding: 10px;
+        }
+      }
+  
+  </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="row  ">
+          <div class="col-md-6 main">
+            <div id="main-image">
+              <img src="https://adcancdn.s3.ap-southeast-1.amazonaws.com/mega/1win-logo.jpg" class="img-fluid" width="360px" height="360px" />
+            </div>
+          </div>
+          <div class="col-md-6 main1">
+            <div id="content-container">
+              
+              <div class="card-title ">1win Official Site</div>
+              <div class="app-content ">Welcome Pack up to 75,000 INR*
+
+              </div>
+              <div class="app-content ">Visit Official site now.
+              </div>
+             <div class="input-container">
+                <a href="https://1wnurc.com/?open=register#7ypo" class="cta-button text-light cta-button--no-app-icon">Go over <img src="https://adcancdn.s3.ap-southeast-1.amazonaws.com/mega/arrow.png" width="35px" height="35px" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+</body></html>
